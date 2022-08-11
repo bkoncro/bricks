@@ -1,0 +1,26 @@
+import 'package:get/get.dart';
+import '{{name.snakeCase()}}_controller.dart';
+
+class {{name.pascalCase()}}Repository {
+  {{name.pascalCase()}}Repository();
+
+  /* Example code
+  final myApi = Get.put(MyApi());
+  getAll(){
+    return myApi.getAll();
+  }
+  getId(id){
+    return myApi.getId(id);
+  }
+  delete(id){
+    return myApi.delete(id);
+  }
+  edit(obj){
+    return myApi.edit( obj );
+  }
+  add(obj){
+      return myApi.add( obj );
+  }
+  */
+
+}

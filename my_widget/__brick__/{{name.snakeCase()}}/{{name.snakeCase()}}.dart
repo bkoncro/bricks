@@ -18,18 +18,12 @@ import '{{name.snakeCase()}}_controller.dart';
 
 class {{name.pascalCase()}} extends GetResponsiveView<{{name.pascalCase()}}Controller> {
   {{name.pascalCase()}}({
-    Key? key,{{#use_binding}}required this.tagName,{{/use_binding}}    
-  }) : super(key: key);
-
-  {{#use_binding}}final String tagName;{{/use_binding}}
-
-  String? get tag => tagName;  
-  
+    Key? key,{{#useTagName}}required this.tagName,{{/useTagName}}    
+  }) : super(key: key);  
+  {{#useTagName}}final String tagName;
+  String? get tag => tagName;{{/useTagName}}
   final bool alwaysUseBuilder = {{alwaysUseBuilder}};
-
   {{#alwaysUseBuilder}}Widget? builder() => Container();{{/alwaysUseBuilder}}
-  
-  
   {{#useMultipleScreen}}
   Widget? desktop() => null;
 

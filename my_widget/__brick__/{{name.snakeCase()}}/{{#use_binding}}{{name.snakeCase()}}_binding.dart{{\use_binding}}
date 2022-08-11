@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 import '{{name.snakeCase()}}_controller.dart';
-
+{{#use_repository}}import '{{name.snakeCase()}}_repository.dart';{{/use_repository}}
 class {{name.pascalCase()}}Binding implements Bindings {
   @override
   void dependencies() {
-    Get.put({{name.pascalCase()}}Controller());
+    Get.put({{name.pascalCase()}}Controller({{#use_repository}}{{name.pascalCase()}}Repository(){{/use_repository}}));
   }
 }
