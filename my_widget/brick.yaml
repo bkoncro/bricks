@@ -31,11 +31,14 @@ vars:
     description: Make widget with multiple screen
     default: false
     prompt: is widget has multiple screen
-  use_binding:
-    type: boolean
-    description: Make widget with binding
-    default: false
-    prompt: is widget using binding
+  widget_type:
+    type: enum
+    description: Make view widget or individual widget
+    default: individual
+    values:
+      - view
+      - individual
+    prompt: Make view widget or individual widget
   use_repository:
     type: boolean
     description: Make widget with repository

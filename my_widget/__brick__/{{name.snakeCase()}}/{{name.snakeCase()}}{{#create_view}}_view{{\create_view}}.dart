@@ -16,7 +16,7 @@ import '{{name.snakeCase()}}_controller.dart';
 /// property `alwaysUseBuilder` to false
 /// With `settings` property you can set the width limit for the screen types.
 
-class {{name.pascalCase()}} extends GetResponsiveView<{{name.pascalCase()}}Controller> {
+class {{name.pascalCase()}}{{#create_view}}View{{/create_view}} extends GetResponsiveView<{{name.pascalCase()}}Controller> {
   {{name.pascalCase()}}({
     Key? key,{{#useTagName}}required this.tagName,{{/useTagName}}    
   }) : super(key: key);  
