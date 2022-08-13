@@ -22,6 +22,8 @@ class {{name.pascalCase()}}{{#create_view}}View{{/create_view}} extends GetRespo
   }) : super(key: key);  
   {{#useTagName}}final String tagName;
   String? get tag => tagName;{{/useTagName}}
+  @override
+  // ignore: overridden_fields
   final bool alwaysUseBuilder = {{alwaysUseBuilder}};
   {{#alwaysUseBuilder}}Widget? builder() => Container();{{/alwaysUseBuilder}}
   {{#useMultipleScreen}}
