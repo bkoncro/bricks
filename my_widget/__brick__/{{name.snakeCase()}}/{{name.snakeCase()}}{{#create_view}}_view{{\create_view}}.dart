@@ -25,14 +25,17 @@ class {{name.pascalCase()}}{{#create_view}}View{{/create_view}} extends GetRespo
   @override
   // ignore: overridden_fields
   final bool alwaysUseBuilder = {{alwaysUseBuilder}};
-  {{#alwaysUseBuilder}}Widget? builder() => Container();{{/alwaysUseBuilder}}
+  {{#alwaysUseBuilder}}
+  @override
+  Widget? builder() => Container();{{/alwaysUseBuilder}}
   {{#useMultipleScreen}}
+  @override
   Widget? desktop() => null;
-
+  @override
   Widget? phone() => null;
-
+  @override
   Widget? tablet() => null;
-
+  @override
   Widget? watch() => null;
   {{/useMultipleScreen}}
 }
