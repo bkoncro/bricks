@@ -21,6 +21,7 @@ class {{name.pascalCase()}}{{#create_view}}View{{/create_view}} extends GetRespo
     Key? key,{{#useTagName}}required this.tagName,{{/useTagName}}    
   }) : super(key: key);  
   {{#useTagName}}final String tagName;
+  @override
   String? get tag => tagName;{{/useTagName}}
   @override
   // ignore: overridden_fields
