@@ -28,6 +28,8 @@ class {{name.pascalCase()}}Controller extends GetxController {
   {{name.pascalCase()}}Controller(this.{{name.camelCase()}}Repository);
   {{/use_repository}}
 
+  // CONTROLLER
+
   // RxVAR
   final _loading = false.obs;
   bool get isLoading => _loading.value;
@@ -37,6 +39,6 @@ class {{name.pascalCase()}}Controller extends GetxController {
 
   // API CALL
 
-  // TAP CALL  
+  // OTHER FUNCTION 
   
 }
